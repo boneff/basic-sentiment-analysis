@@ -9,8 +9,8 @@ RUN pip install pipenv
 
 # install from Pipfile
 RUN pipenv install
-# install NLTK data (https://www.nltk.org/data.html)
-RUN pip install nltk && python -m nltk.downloader -d /usr/local/share/nltk_data all
+# install NLTK data (https://www.nltk.org/data.html) (downloading only "vader_lexicon", if needed we could download "all")
+RUN pip install nltk && python -m nltk.downloader -d /usr/local/share/nltk_data vader_lexicon
 RUN mkdir logs
 
 #CMD ["pipenv", "run", "python", "main.py"]
