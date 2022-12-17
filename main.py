@@ -17,9 +17,6 @@ def setup():
 
 
 # reading and wrangling data
-# TODO - pass path to the CSV
-# TODO - change the example to mount a volume, so we can read the file from the passed path
-# TODO - pass the fields we want to work with from the CSV
 csv_path = os.getenv('CSV_PATH', '/app/data/avatar.csv')
 field_name = os.getenv('FIELD_NAME', 'character_words')
 
